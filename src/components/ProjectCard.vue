@@ -17,8 +17,8 @@ export default {
     computed: {
         contentPreview() {
           
-            if (!this.post.content) {
-                return 'Nessun contenuto'
+            if (!this.project.content) {
+                return 'NO PROJECT'
             } else if (this.project.content.length > 150) {
                 return this.project.content.substring(0, 150) + "...";
             } else {
