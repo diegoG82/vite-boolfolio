@@ -1,24 +1,54 @@
 <script>
+
+import { store } from "../store";
+
 export default {
     name: 'ProjectCard',
+    data() {
+        return {
+           store
+        }
+    },
+
     props: {
         project: Object
     },
-    data() {
-        return {
-            baseUrl: "http://127.0.0.1:8000",
+
+    computed: {
+        contentPreview() {
+          
+            if (!this.post.content) {
+                return 'Nessun contenuto'
+            } else if (this.project.content.length > 150) {
+                return this.project.content.substring(0, 150) + "...";
+            } else {
+                return this.project.content
+            }
+        },
+        imgSrc() {
+           
+            if (!this.project.image) return "";
+            if (this.project.image.startsWith('https://')) {
+                return this.project.image;
+            } else {
+                return `${this.store.apiBaseUrl}/storage/${this.project.image}`;
+            }
         }
     }
+
+    
 }
 </script>
 
 <template>
     <div class="card h-100">
         <h5>{{ project.title }}</h5>
-        <img v-if="project.image" :src="`${baseUrl}/storage/${project.image}`" class="card-img-top" :alt="project.title" />
+        <!-- <img v-if="project.image" :src="`${baseUrl}/storage/${project.image}`" class="card-img-top" :alt="project.title" />
         <div v-else>
             Nessuna immagine presente
-        </div>
+        </div> -->
+        <img v-if="project.image" :src="imgSrc" alt="">
+
         <div class="card-body">
             <h5>{{ project.title }}</h5>
             <p>{{ project.content }}</p>
