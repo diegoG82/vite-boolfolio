@@ -25,8 +25,8 @@ export default {
 
 </script>
 <template>
-    <header>
-        <nav class="navbar navbar-expand-lg  bg-primary">
+    <header >
+        <nav class="navbar navbar-expand-lg  bg-primary header">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">BoolFolio By Diego G.</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -46,6 +46,9 @@ export default {
     </header>
 </template>
 <style lang="scss" scoped>
+.header{
+    height: 50px;
+}
 
 
 </style>
