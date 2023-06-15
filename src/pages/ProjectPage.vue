@@ -46,8 +46,8 @@ export default {
 <template>
   <div class="container">
     <section v-if="!loading">
-      <h1 class="text-center mt-4 mb-4">PROJECT LIST</h1>
-      <h5 class="text-center text-success">Number of current Projects: {{ totalProjects }}</h5>
+      <h1 class="text-center text-primary  mt-4 mb-4">PROJECT LIST</h1>
+      <h5 class="text-center text-success mt-4 mb-4">Number of current Projects: {{ totalProjects }}</h5>
       <div class="row row-cols-5 g-3">
         <div class="col" v-for="project in projects" :key="project.id">
           <ProjectCard :project="project" />

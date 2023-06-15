@@ -14,10 +14,10 @@ export default {
                     routeName: "projects"
                 },
                 {
-                    label: "Aboutus",
+                    label: "About Us",
                     routeName: "aboutus"
                 },
-               
+
             ]
         }
     }
@@ -26,7 +26,7 @@ export default {
 </script>
 <template>
     <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg  bg-primary">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">BoolFolio By Diego G.</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -45,4 +45,7 @@ export default {
         </nav>
     </header>
 </template>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+
+
+</style>
