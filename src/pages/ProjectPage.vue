@@ -62,7 +62,7 @@ export default {
 
       <p>
         <label class="form-label" for="type">TYPE</label>
-        <select v-model="selectedType" id="type" class="form-select" @change="getProjects()">
+        <select v-model="selectedType" id="type" class="form-select bg-primary  " @change="getProjects()">
           <option value="all">ALL</option>
           <option v-for="type in types" :value="type.id" :key="type.id">
             {{ type.name }}
