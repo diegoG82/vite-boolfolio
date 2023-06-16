@@ -8,17 +8,16 @@ export default {
     <h1 class="text-primary text-center mt-4 mb-4">WELCOME TO BOOLFOLIO!!!</h1>
 
     <div class="container">
-  
-            <img src="../assets/img/retrofu.jpg" alt="">
-        
-     
+
+
+
     </div>
 </template>
 <style lang="scss" scoped>
 .container {
-        height: 800px;
-    img{
-        max-width: 100%;
-    }
+    height: 700px;
+    background-image: url(../assets/img/retrofu.jpg);
+    background-position: center;
+    background-size: cover;
 }
 </style>

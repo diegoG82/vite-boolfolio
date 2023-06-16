@@ -16,10 +16,13 @@ export default {
     color: black;
     background-color: #007bff;
     height: 50px;
-    line-height: 50px;
+   
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
+    h4{
+        line-height: 50px;
+    }
 }
 </style>
